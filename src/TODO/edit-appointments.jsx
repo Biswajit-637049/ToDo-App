@@ -17,7 +17,7 @@ export function EditAppointment() {
             username: appointment.username
         },
         onSubmit: (appointment) => {
-            axios.put(`http://127.0.0.1:4050/edit-appointment/${params.id}`, appointment)
+            axios.put(`https://todo-app-yw5l.onrender.com/edit-appointment/${params.id}`, appointment)
                 .then(() => {
                     console.log('saved');
                 })
@@ -27,7 +27,7 @@ export function EditAppointment() {
     })
 
     useEffect(() => {
-        axios.get(`http://127.0.0.1:4050/appointments/${params.id}`)
+        axios.get(`https://todo-app-yw5l.onrender.com/appointments/${params.id}`)
             .then(response => {
                 setAppointment(response.data);
             })

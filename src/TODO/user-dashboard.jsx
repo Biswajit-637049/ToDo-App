@@ -10,7 +10,7 @@ export function UserDashborad() {
     let navigate=useNavigate();
     const [appoinments, setAppoinments] = useState([{ id: 0, title: '', date: '', userid: '' }])
     useEffect(() => {
-        axios.get(`http://127.0.0.1:4050/appointments`)
+        axios.get(`https://todo-app-yw5l.onrender.com/appointments`)
             .then(response => {
                 let user_appointments = response.data.filter(appoinment => appoinment.username === cookies['userid']);
                 setAppoinments(user_appointments)

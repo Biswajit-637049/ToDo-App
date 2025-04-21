@@ -7,13 +7,13 @@ export function DeleteAppointment() {
     let navigate=useNavigate();
     const [appointment, setAppointment] = useState({id:0, title:'', date:'', username:''});
     useEffect(()=>{
-        axios.get(`http://127.0.0.1:4050/appointments/${param.id}`)
+        axios.get(`https://todo-app-yw5l.onrender.com/appointments/${param.id}`)
         .then(response=>{
              setAppointment(response.data)
         })
     },[param.id])
     function handleDeleteClick(){
-        axios.delete(`http://127.0.0.1:4050/delete-appointment/${param.id}`)
+        axios.delete(`https://todo-app-yw5l.onrender.com/delete-appointment/${param.id}`)
         .then(()=>{
             console.log("Deleted");
         })

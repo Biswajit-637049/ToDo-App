@@ -24,7 +24,7 @@ export function ToDoRegister() {
                 .matches(/@gmail\.com/, 'Email must end with gmail.com')
         }),
         onSubmit: (user) => {
-            axios.post(`http://127.0.0.1:4050/register-user`, user).then(() => {
+            axios.post(`https://todo-app-yw5l.onrender.com/register-user`, user).then(() => {
                 console.log("posted..");
             });
             alert("Registered Successfully..");

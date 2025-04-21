@@ -23,7 +23,7 @@ export function AddAppointment() {
             .required("Date is required")
         }),
         onSubmit: (appoinment) => {
-            axios.post(`http://127.0.0.1:4050/add-appointment`, appoinment)
+            axios.post(`https://todo-app-yw5l.onrender.com/add-appointment`, appoinment)
                 .then(() => {
                     console.log("appoinment added");
                 })
